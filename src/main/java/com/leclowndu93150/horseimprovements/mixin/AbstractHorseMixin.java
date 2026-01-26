@@ -58,10 +58,17 @@ public abstract class AbstractHorseMixin extends Animal implements HorseAccessor
         float strafeInput = horseimprovements$lastStrafeInput;
         float forwardInput = horseimprovements$lastForwardInput;
 
-        if (horseimprovements$currentSpeed > 0.01f || forwardInput != 0) {
-            horseimprovements$animTick++;
+        boolean isMoving = horseimprovements$currentSpeed > 0.01f || forwardInput != 0;
+        boolean isTurning = Math.abs(strafeInput) > 0.01f;
 
-            if (Math.abs(strafeInput) > 0.01f) {
+        if (isMoving || isTurning) {
+            if (isMoving) {
+                horseimprovements$animTick++;
+            } else {
+                horseimprovements$animTick = 0;
+            }
+
+            if (isTurning) {
                 float turnAmount = -strafeInput * HorseImprovementsConfig.turnSpeed;
                 horseimprovements$targetYRot = Mth.wrapDegrees(this.getYRot() + turnAmount);
             }
