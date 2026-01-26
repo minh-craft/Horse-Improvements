@@ -73,8 +73,6 @@ public abstract class AbstractHorseMixin extends Animal implements HorseAccessor
             if (isTurning) {
                 float turnAmount = -strafeInput * HorseImprovementsConfig.turnSpeed;
                 horseimprovements$targetYRot = Mth.wrapDegrees(this.getYRot() + turnAmount);
-            } else {
-                horseimprovements$targetYRot = this.getYRot();
             }
 
             float currentYRot = this.getYRot();
