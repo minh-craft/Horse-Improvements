@@ -15,6 +15,9 @@
     ],
     "main": [
       "com.leclowndu93150.horseimprovements.Horseimprovements"
+    ],
+    "mixinsquared": [
+      "com.leclowndu93150.horseimprovements.HorseImprovementsMixinCanceller"
     ]
   },
   "mixins": [
