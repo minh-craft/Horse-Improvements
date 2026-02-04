@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "horseimprovements",
+  "id": "immersivehorseriding",
   "version": "${version}",
-  "name": "horseimprovements",
-  "description": "",
+  "name": "Immersive Horse Riding",
+  "description": "Makes horse riding more immersive with acceleration and camera bobbing and weightiness.",
   "authors": [],
   "contact": {},
-  "license": "MIT",
-  "icon": "assets/horseimprovements/icon.png",
+  "license": "MPL 2.0",
+  "icon": "assets/immersivehorseriding/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.leclowndu93150.horseimprovements.client.HorseimprovementsClient"
+      "com.leclowndu93150.immersivehorseriding.client.ImmersiveHorseRidingClient"
     ],
     "main": [
-      "com.leclowndu93150.horseimprovements.Horseimprovements"
+      "com.leclowndu93150.immersivehorseriding.ImmersiveHorseRiding"
     ],
     "mixinsquared": [
-      "com.leclowndu93150.horseimprovements.HorseImprovementsMixinCanceller"
+      "com.leclowndu93150.immersivehorseriding.ImmersiveHorseRidingMixinCanceller"
     ]
   },
   "mixins": [
-    "horseimprovements.mixins.json"
+    "immersivehorseriding.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

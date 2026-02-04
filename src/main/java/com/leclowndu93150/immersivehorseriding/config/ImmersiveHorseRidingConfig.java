@@ -1,4 +1,4 @@
-package com.leclowndu93150.horseimprovements.config;
+package com.leclowndu93150.immersivehorseriding.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -11,9 +11,9 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class HorseImprovementsConfig {
+public class ImmersiveHorseRidingConfig {
     private static final Path CONFIG_PATH = FabricLoader.getInstance()
-            .getConfigDir().resolve("horseimprovements.json");
+            .getConfigDir().resolve("immersive-horse-riding.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static float turnSpeed = 5.0f;

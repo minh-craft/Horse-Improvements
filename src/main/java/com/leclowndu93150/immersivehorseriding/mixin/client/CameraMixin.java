@@ -1,7 +1,7 @@
-package com.leclowndu93150.horseimprovements.mixin.client;
+package com.leclowndu93150.immersivehorseriding.mixin.client;
 
-import com.leclowndu93150.horseimprovements.HorseRidingData;
-import com.leclowndu93150.horseimprovements.config.HorseImprovementsConfig;
+import com.leclowndu93150.immersivehorseriding.HorseRidingData;
+import com.leclowndu93150.immersivehorseriding.config.ImmersiveHorseRidingConfig;
 import net.minecraft.client.Camera;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
@@ -22,7 +22,7 @@ public abstract class CameraMixin {
     protected abstract void move(double d, double e, double f);
 
     @Inject(method = "setup", at = @At("RETURN"))
-    private void horseimprovements$addHeadBob(BlockGetter blockGetter, Entity entity, boolean detached, boolean thirdPerson, float partialTick, CallbackInfo ci) {
+    private void immersive_horse_riding$addHeadBob(BlockGetter blockGetter, Entity entity, boolean detached, boolean thirdPerson, float partialTick, CallbackInfo ci) {
         if (detached || thirdPerson) return;
         if (this.entity == null) return;
 
@@ -35,8 +35,8 @@ public abstract class CameraMixin {
         if (currentSpeed < 0.01f) return;
 
         int animTick = HorseRidingData.getAnimTick();
-        float intensity = HorseImprovementsConfig.headBobIntensity;
-        float frequency = HorseImprovementsConfig.headBobFrequency;
+        float intensity = ImmersiveHorseRidingConfig.headBobIntensity;
+        float frequency = ImmersiveHorseRidingConfig.headBobFrequency;
 
         float smoothTick = animTick + partialTick;
         float bobOffset = (float) -Math.cos(smoothTick * frequency) * intensity * currentSpeed;
