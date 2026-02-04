@@ -1,4 +1,4 @@
-package com.leclowndu93150.horseimprovements;
+package com.leclowndu93150.immersivehorseriding;
 
 public class HorseRidingData {
     private static float currentSpeed = 0.0f;

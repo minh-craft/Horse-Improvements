@@ -1,10 +1,10 @@
-package com.leclowndu93150.horseimprovements;
+package com.leclowndu93150.immersivehorseriding;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
 
 import java.util.List;
 
-public class HorseImprovementsMixinCanceller implements MixinCanceller {
+public class ImmersiveHorseRidingMixinCanceller implements MixinCanceller {
 
     // Fix compatibility issue with horseman
     // free_camera_when_mounted feature breaks camera bobbing
