@@ -4,8 +4,13 @@
   "version": "${version}",
   "name": "Immersive Horse Riding",
   "description": "Makes horse riding more immersive with acceleration and camera bobbing and weightiness.",
-  "authors": [],
-  "contact": {},
+  "authors": [
+    "https://github.com/Leclowndu93150",
+    "https://github.com/minh-craft"
+  ],
+  "contact": {
+    "sources": "https://github.com/minh-craft/Immersive-Horse-Riding"
+  },
   "license": "MPL 2.0",
   "icon": "assets/immersivehorseriding/icon.png",
   "environment": "*",

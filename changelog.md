@@ -1,3 +1,13 @@
+## v1.2.1
+
+### Added
+- Add authors and source code link
+
+### Changed
+- Updated mod logo and icon
+
+---
+
 ## v1.2.0
 
 ### Changed
